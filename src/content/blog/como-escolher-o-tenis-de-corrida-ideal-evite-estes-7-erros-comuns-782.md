@@ -1,10 +1,11 @@
 ---
-title: "Como Escolher o Tênis de Corrida Ideal: Evite Estes 7 Erros Comuns"
-description: "Descubra como escolher o tênis de corrida perfeito para você. Evite 7 erros cruciais que comprometem seu desempenho e podem causar lesões. Guia técnico completo."
+title: 'Como Escolher o Tênis de Corrida Ideal: Evite Estes 7 Erros Comuns'
+description: Descubra como escolher o tênis de corrida perfeito para você. Evite 7 erros cruciais que comprometem seu desempenho e podem causar lesões. Guia técnico completo.
 pubDate: 2026-07-02
-category: "dicas"
-heroImage: "https://http2.mlstatic.com/D_NQ_NP_2X_879448-MLB821448629_012025-F.webp"
-affiliateLink: ""
+heroImage: https://picsum.photos/id/347/1920/1280.webp
+affiliateLink: ''
+category: dicas
+author: Equipe
 ---
 
 <h2>A Escolha Estratégica: Por Que o Tênis Certo Transforma Sua Corrida</h2>
