@@ -1,0 +1,14 @@
+{
+  "theme": "melhores-tenis",
+  "categories": [
+    { "value": "tenis-corrida", "label": "Tênis de Corrida" },
+    { "value": "tenis-casual", "label": "Tênis Casual" },
+    { "value": "custo-beneficio", "label": "Custo-Benefício" },
+    { "value": "dicas", "label": "Dicas e Cuidados" }
+  ],
+  "images": [
+    { "value": "/recommended-tenis-corrida.jpg", "label": "Tênis de Corrida (Destaque)" },
+    { "value": "/recommended-tenis-casual.jpg", "label": "Tênis Casual (Destaque)" },
+    { "value": "/recommended-tenis-premium.jpg", "label": "Tênis Premium (Destaque)" }
+  ]
+}

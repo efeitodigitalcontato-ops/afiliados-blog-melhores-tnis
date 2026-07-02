@@ -876,6 +876,54 @@
       if (savedGeminiKey) {
         document.getElementById("gemini-key").value = savedGeminiKey;
       }
+
+      // Carregar dinamicamente as categorias e imagens baseadas no tema do blog
+      fetch('./generatorConfig.json')
+        .then(response => {
+          if (!response.ok) throw new Error('Configurações customizadas não encontradas');
+          return response.json();
+        })
+        .then(config => {
+          if (config && config.categories && config.images) {
+            // Atualizar select de categorias
+            const catSelect = document.getElementById('post-category');
+            if (catSelect) {
+              catSelect.innerHTML = '';
+              config.categories.forEach(cat => {
+                const opt = document.createElement('option');
+                opt.value = cat.value;
+                opt.textContent = cat.label;
+                catSelect.appendChild(opt);
+              });
+            }
+
+            // Atualizar select de imagens de destaque
+            const heroSelect = document.getElementById('post-hero');
+            if (heroSelect) {
+              heroSelect.innerHTML = '';
+              config.images.forEach(img => {
+                const opt = document.createElement('option');
+                opt.value = img.value;
+                opt.textContent = img.label;
+                heroSelect.appendChild(opt);
+              });
+              // Sempre manter a opção customizada
+              const customOpt = document.createElement('option');
+              customOpt.value = 'custom';
+              customOpt.textContent = '-- Link de Imagem Customizada --';
+              heroSelect.appendChild(customOpt);
+            }
+            
+            // Ajustar autor padrão do preview conforme o tema caso não tenha usuário logado
+            if (authorDisplay && !sessionUser) {
+              const themeName = config.theme ? config.theme.charAt(0).toUpperCase() + config.theme.slice(1) : "Ninja";
+              authorDisplay.textContent = "Equipe " + themeName;
+            }
+          }
+        })
+        .catch(err => {
+          console.log('Usando configuração padrão do gerador:', err);
+        });
     });
 
     // Detectar bypass antes de sobrescrever o body no DOMContentLoaded
